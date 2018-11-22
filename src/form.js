@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Form,FormGroup, FormControl, Button} from 'react-bootstrap';
+import axios from 'axios';
 
 class EntryForm extends Component {
   constructor(props, context) {
@@ -20,13 +21,7 @@ class EntryForm extends Component {
       value: e.target[0].value
     }
     e.target.reset();
-    fetch('/', {
-      method: 'POST',
-      body: JSON.stringify(number),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(res => res.json())
+    axios.post('/', number)
     .then(response => this.props.callBack(response))
     .catch(error => console.error('Error:', error));
   }

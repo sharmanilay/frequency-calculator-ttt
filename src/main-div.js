@@ -12,9 +12,8 @@ class MainDiv extends Component {
     }
   }
   myCallback = (dataFromChild) => {
-        console.log(dataFromChild)
         this.setState({
-          textData: dataFromChild
+          textData: dataFromChild.data
         })
   }
   render(){
