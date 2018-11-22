@@ -1,0 +1,43 @@
+body{
+    background-color: #000;
+    overflow-x: hidden;
+}
+.App {
+  text-align: center;
+  padding: 0px 0px 0px 0px ;
+}
+.form-wrapper{
+  text-align: center;
+}
+.form{
+  background-color: #fff;
+  padding: 10px;
+}
+.table-div{
+  margin-top: 20px;
+  padding: 10px;
+}
+.logo{
+  top: 0px;
+  height: 50px;
+  width: 50px;
+}
+.navbar{
+  background-color: #000000;
+  border-color: #000;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #fff ;
+}
+.navlinks:hover{
+  background-color: white;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.main-logo{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.main-div{
+  background-color: #fff;
+  padding: 10px;
+}
