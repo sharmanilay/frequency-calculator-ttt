@@ -1,11 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
 ## Table of Contents
 
-- [Updating to New Releases](#updating-to-new-releases)
+- [Installing the app](#installation)
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
 - [Available Scripts](#available-scripts)
@@ -106,10 +101,14 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - [Alternatives to Ejecting](#alternatives-to-ejecting)
 - [Something Missing?](#something-missing)
 
-## Updating to New Releases
+## Installation
 
-Create React App is divided into two packages:
-
+1. Clone the repository into your local directory:
+2. Open terminal in the respective directory and write the following instruction:
+    ```
+    npm install
+    ```
+## Front-End
 - `create-react-app` is a global command-line utility that you use to create new projects.
 - `react-scripts` is a development dependency in the generated projects (including this one).
 
