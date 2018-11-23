@@ -42,8 +42,8 @@ app.post('/',function(req,res) {
   return res.send(newData);
 })
 
-app.get('/', function (req,res) {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+app.get('*', function (req,res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 
