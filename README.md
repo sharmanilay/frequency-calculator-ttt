@@ -15,29 +15,58 @@
     ```
 ## Front-End
 The front-end is created using ReactJS, to create a efficient and fast user interface. The basic strutre of the front-end file directory is
-```
-ttt/
-  README.md
-  node_modules/
-  package.json
-  public/
-    index.html
-    favicon.ico
-  src/
-    App.css
-    App.js
-    App.test.js
-    index.css
-    index.js
-
-
-When you run `create-react-app`, it always creates the project with the latest version of `react-scripts` so you’ll get all the new features and improvements in newly created apps automatically.
-
-To update an existing project to a new version of `react-scripts`, [open the changelog](https://github.com/facebook/create-react-app/blob/master/CHANGELOG.md), find the version you’re currently on (check `package.json` in this folder if you’re not sure), and apply the migration instructions for the newer versions.
-
-In most cases bumping the `react-scripts` version in `package.json` and running `npm install` (or `yarn install`) in this folder should be enough, but it’s good to consult the [changelog](https://github.com/facebook/create-react-app/blob/master/CHANGELOG.md) for potential breaking changes.
-
-We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
+    ```
+      ttt/
+      README.md
+      node_modules/
+      package.json
+      server.js
+      public/
+        index.html
+        favicon.ico
+      src/
+        images/
+        navigation/
+          navbar.js
+        App.css
+        App.js
+        App.test.js
+        form.js
+        index.css
+        index.js
+        logo.js
+        main-div.js
+        r-table.js
+        serviceWorker.js
+    ```
+The important components are:
+  ### Form
+  This components has the code which takes the input from user and sends it to the backend to fetch top n numbers with highest frequency.
+  ```
+  render(){
+    return  (
+      <div className="form-wrapper">
+        <Form onSubmit={this.handleSubmit} className="form">
+        <h3>Frequency Calculator</h3>
+          <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
+          <InputGroup>
+            <FormControl
+              type="number"
+              placeholder="Enter the number"
+              onChange={this.handleChange}
+              required
+            />
+            <FormControl.Feedback />
+            <InputGroup.Button>
+            <Button onSubmit={this.handleSubmit} className="submit-button" type="submit">Submit</Button>
+            </InputGroup.Button>
+          </InputGroup>
+          </FormGroup>
+        </Form>
+      </div>
+    );
+  }
+  ```
 
 ## Sending Feedback
 
