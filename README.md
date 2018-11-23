@@ -5,7 +5,6 @@
   - [Form](#form)
   - [Table](#table)
 - [Back-end](#backend)
-  - [Frequency Computation]
 ## Installation
 
 1. Clone the repository into your local directory:
@@ -126,7 +125,7 @@ render(){
      })
      data = sortedFreq;
    })
-   
+
  app.post('/',function(req,res) {
    const num = req.body.value;
    console.log(num);
