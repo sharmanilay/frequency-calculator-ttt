@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Form,FormGroup, FormControl, Button} from 'react-bootstrap';
+import {Form,InputGroup,FormGroup, FormControl, Button} from 'react-bootstrap';
 import axios from 'axios';
 
 class EntryForm extends Component {
@@ -37,19 +37,20 @@ class EntryForm extends Component {
       <div className="form-wrapper">
         <Form onSubmit={this.handleSubmit} className="form">
         <h3>Frequency Calculator</h3>
-          <FormGroup
-            controlId="formBasicText"
-            validationState={this.getValidationState()}
-          >
-            <FormControl
-              type="number"
-              placeholder="Enter the number"
-              onChange={this.handleChange}
-              required
-            />
-            <FormControl.Feedback />
-          </FormGroup>
-          <Button onSubmit={this.handleSubmit} className="submit-button" type="submit">Submit</Button>
+            <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
+            <InputGroup>
+              <FormControl
+                type="number"
+                placeholder="Enter the number"
+                onChange={this.handleChange}
+                required
+              />
+              <FormControl.Feedback />
+              <InputGroup.Button>
+              <Button onSubmit={this.handleSubmit} className="submit-button" type="submit">Submit</Button>
+              </InputGroup.Button>
+            </InputGroup>
+            </FormGroup>
         </Form>
       </div>
     );
