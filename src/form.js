@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Form,InputGroup,FormGroup, FormControl, Button} from 'react-bootstrap';
+import {Form,InputGroup,FormGroup, FormControl, Button,Col} from 'react-bootstrap';
 import axios from 'axios';
 
 class EntryForm extends Component {
@@ -36,8 +36,9 @@ class EntryForm extends Component {
     return  (
       <div className="form-wrapper">
         <Form onSubmit={this.handleSubmit} className="form">
-        <h3>Frequency Calculator</h3>
+        <h3 className="freqHeading">Frequency Calculator</h3>
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
+            <Col xs={12} md={6} mdPush={3}>
             <InputGroup>
               <FormControl
                 type="number"
@@ -50,6 +51,7 @@ class EntryForm extends Component {
               <Button onSubmit={this.handleSubmit} className="submit-button" type="submit">Submit</Button>
               </InputGroup.Button>
             </InputGroup>
+            </Col>
             </FormGroup>
         </Form>
       </div>

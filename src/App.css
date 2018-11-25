@@ -6,7 +6,11 @@ body{
   text-align: center;
   padding: 0px 0px 0px 0px ;
 }
+.freqHeading{
+  margin-bottom: 20px;
+}
 .form-wrapper{
+  padding-top: 10px;
   text-align: center;
 }
 .form{
